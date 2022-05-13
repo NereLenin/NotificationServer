@@ -8,6 +8,7 @@ use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use IonAuth\Libraries\IonAuth;
 
 /**
  * Class BaseController
@@ -27,6 +28,7 @@ class BaseController extends Controller
      * @var CLIRequest|IncomingRequest
      */
     protected $request;
+    protected $ionAuth;
 
     /**
      * An array of helpers to be loaded automatically upon
@@ -45,8 +47,16 @@ class BaseController extends Controller
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
+        $this->ionAuth = new IonAuth();
+
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+    }
+
+    protected function withIon(array $data = [])
+    {
+        $data['ionAuth'] = $this->ionAuth;
+        return $data;
     }
 }

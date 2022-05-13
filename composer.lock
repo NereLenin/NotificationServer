@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "25b79e653d1cd56b46d4079896692eea",
+    "content-hash": "17db980b1d9db5a4652ffd0d2ddec239",
     "packages": [
+        {
+            "name": "benedmunds/codeigniter-ion-auth",
+            "version": "4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benedmunds/CodeIgniter-Ion-Auth.git",
+                "reference": "2e335e1c56a64a9b7c7dcbaf9cd56ae6077d8456"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benedmunds/CodeIgniter-Ion-Auth/zipball/2e335e1c56a64a9b7c7dcbaf9cd56ae6077d8456",
+                "reference": "2e335e1c56a64a9b7c7dcbaf9cd56ae6077d8456",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeigniter4/codeigniter4-standard": "^1.0",
+                "phpunit/phpunit": "^7.3",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IonAuth\\": "/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben EDMUNDS"
+                },
+                {
+                    "name": "Benoit VRIGNAUD",
+                    "email": "benoit.vrignaud@tangue.fr"
+                }
+            ],
+            "description": "Simple and Lightweight Auth System for CodeIgniter",
+            "homepage": "http://benedmunds.com/ion_auth",
+            "keywords": [
+                "auth",
+                "codeigniter"
+            ],
+            "support": {
+                "source": "https://github.com/benedmunds/CodeIgniter-Ion-Auth/tree/4",
+                "issues": "https://github.com/benedmunds/CodeIgniter-Ion-Auth/issues"
+            },
+            "time": "2022-04-26T12:46:32+00:00"
+        },
         {
             "name": "codeigniter4/framework",
             "version": "v4.1.9",
@@ -63,6 +112,57 @@
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
             "time": "2022-02-26T00:51:52+00:00"
+        },
+        {
+            "name": "codeigniter4/translations",
+            "version": "v4.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeigniter4/translations.git",
+                "reference": "3d4fbcca80a6d37b4513350d45f68aef64e5a288"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeigniter4/translations/zipball/3d4fbcca80a6d37b4513350d45f68aef64e5a288",
+                "reference": "3d4fbcca80a6d37b4513350d45f68aef64e5a288",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "codeigniter/coding-standard": "^1.1",
+                "codeigniter4/codeigniter4": "4.x-dev",
+                "ext-tokenizer": "*",
+                "friendsofphp/php-cs-fixer": "^3.1",
+                "nexusphp/cs-config": "^3.3",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "project",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Translations\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Translations for CodeIgniter v4 web framework",
+            "homepage": "https://codeigniter.com",
+            "support": {
+                "forum": "http://forum.codeigniter.com/",
+                "issues": "https://github.com/codeigniter4/translations/issues",
+                "slack": "https://codeigniterchat.slack.com",
+                "source": "https://github.com/codeigniter4/translations"
+            },
+            "time": "2022-01-05T06:41:39+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -2581,8 +2681,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "benedmunds/codeigniter-ion-auth": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
