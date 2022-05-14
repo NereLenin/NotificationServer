@@ -15,12 +15,11 @@ class NotificationApi extends ResourceController
 
     public function allNotifications() //Отображение всех записей
     {
-        $oauth = new OAuth();
-        if ($oauth->isLoggedIn()) {
+        //$oauth = new OAuth();
+       // if ($oauth->isLoggedIn()) {
             return $this->respond($this->model->getNotification());
-
-        }
-        $oauth->server->getResponse()->send();
+        //}
+        //$oauth->server->getResponse()->send();
     }
 
     public function createNotification()
