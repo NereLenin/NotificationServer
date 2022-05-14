@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Универсальная рейтинговая система CURaing</title>
+    <title>Менеджер уведомлений</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6e9b058a28.js"></script>
     <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,17 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Рейтинги
+                <a class="nav-link dropdown-toggle active" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Уведомления
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="<?= base_url()?>/notification">Все рейтинги</a>
-                    <a class="dropdown-item" href="<?= base_url()?>/notification/store">Создать рейтинг</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Мой профиль</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Мой профиль</a>
+                    <a class="dropdown-item" href="<?= base_url()?>/notification">Все уведомления</a>
+                    <a class="dropdown-item" href="<?= base_url()?>/notification/store">Создать уведомление</a>
                 </div>
             </li>
         </ul>
@@ -58,9 +52,6 @@
 
     <?= $this->renderSection('content') ?>
 </main>
-<footer class="text-center">
-    <p>© Дмитрий Кузин 2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo base_url();?>/pages/view/agreement">Пользовательское соглашение</a></p>
-</footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
