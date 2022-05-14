@@ -17,7 +17,12 @@
                         <h5 class="card-title">Уведомление</h5>
                         <p class="card-text">Текст уведомления: <?= esc($item['text']); ?></p>
                         <p class="card-text">Время отправки: <?= esc($item['time']); ?></p>
-                        <a href="/notification/delete/<?= esc($item['id']); ?>/" class="btn btn-primary">Удалить</a>
+                        <?php if ($ionAuth->loggedIn()): ?>
+                            <div class="nav-item dropdown">
+                                <a href="/notification/delete/<?= esc($item['id']); ?>/" class="btn btn-primary">Удалить</a>
+                            </div>
+                        <?php endif ?>
+
                     </div>
                 </div>
             </div>

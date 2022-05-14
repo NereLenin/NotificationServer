@@ -7,21 +7,12 @@ class Notification extends BaseController
 {
  public function index() //Обображение всех записей
  {
-     if (!$this->ionAuth->loggedIn())
-     {
-         return redirect()->to('/auth/login');
-     }
-
    $model = new NotificationModel();
    $data ['notification'] = $model->getNotification();
    echo view('notifications/view_all', $this->withIon($data));
  }
     public function view($id = null) //отображение одной записи
     {
-        if (!$this->ionAuth->loggedIn())
-        {
-            return redirect()->to('/auth/login');
-        }
         $model = new NotificationModel();
         $data ['notification'] = $model->getNotification($id);
         echo view('notifications/view', $this->withIon($data));
